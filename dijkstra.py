@@ -1,9 +1,10 @@
-import queue  
+import queue
 from collections import namedtuple
 
 Edge = namedtuple('Edge', ['vertex', 'weight'])
 
-class GraphUndirectedWeighted(object):  
+
+class GraphUndirectedWeighted(object):
     def __init__(self, vertex_count):
         self.vertex_count = vertex_count
         self.adjacency_list = [[] for _ in range(vertex_count)]
@@ -23,7 +24,7 @@ class GraphUndirectedWeighted(object):
             yield v
 
 
-def dijkstra(graph, source, dest):  
+def dijkstra(graph, source, dest):
     q = queue.PriorityQueue()
     parents = []
     distances = []
